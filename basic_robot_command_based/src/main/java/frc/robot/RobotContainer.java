@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.Drive;
 import frc.robot.subsystems.DriveTrain;
@@ -20,9 +21,12 @@ import frc.robot.subsystems.DriveTrain;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final DriveTrain DriveTrain = new DriveTrain();
-
-  private final Drive Drive = new Drive();
+  //create a drivetrain
+  public static DriveTrain DriveTrain = new DriveTrain();
+  //create a drive command
+  public static Drive Drive = new Drive();
+  //create a joystick on port 
+  public static Joystick driveStick = new Joystick(0);
 
 
 
